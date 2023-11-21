@@ -42,6 +42,8 @@ header  .navigation .menu{
     user-select: none;
 
 }
+
+
 .menu-item > a{
     color: #fff;
     font-size: 1em;
@@ -130,6 +132,9 @@ header  .navigation .menu{
 .more   .more-menu  .more-item:hover{
     background:#4080EF;
 }
+.menu-btn{
+    display: none;
+}
 
 @media (max-width: 1060px){
     header  .navigation .menu{
@@ -139,12 +144,16 @@ header  .navigation .menu{
     min-width: 350px;
     height:100vh;
     top:0;
-    right:0;
+    right:-100%;
     padding:90px 50px;
     overflow-y:auto;
     justify-content:center;
     list-style:none;
     user-select: none;
+}
+
+header  .navigation .menu.active{
+    right: 0;
 }
 
     .menu-item{
@@ -159,6 +168,7 @@ header  .navigation .menu{
         background: rgba(255,255,255, 0.1);
         border-radius: 5px;
         overflow: hidden;
+        display: none;
 
     }
 
@@ -184,5 +194,47 @@ header  .navigation .menu{
         transform: translatY(0);
         background: rgba(255, 255, 255, 0.1)
         border-radius: 5px;
+        display: none;
+    }
+
+    .more   .more-menu  .more-item{
+        box-shadow: none;
+    }
+
+    .more   .more-menu  .more-item:hover{
+        background: none;
+    }
+
+    .more   .more-menu  .more-item a{
+        margin-left: 20px;
+
+    }
+
+    .close-btn{
+        position:absolute;
+        background: url(X\ pic\ 2.png)no-repeat;
+        width:40px;
+        height: 40px;
+        background-size: 25px;
+        background-position: center;
+        top: 0;
+        left: 0;
+        margin: 25px;
+        cursor: pointer;
+    }
+
+    .menu-btn{
+      background: url(menu\ btn.png)no-repeat;
+      width: 40px;
+      height: 40px;
+      background-size:30px;
+      background-position: centre;
+      cursor: pointer;
+      display: block;
+    }
+
+    header{
+        padding: 15px 20px;
+
     }
 }
