@@ -5,6 +5,57 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+section{
+    padding:20px 100px; 
+}
+
+.section-home{
+   position: relative;
+   min-height: 100vh;
+   background: url(nat.webp)no-repeat;
+   background-size: cover;
+   background-position: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.section-home:before{
+    content:'';
+    position:absolute;
+    background: linear-gradient(to top, #23252B,transparent);
+    width: 100%;
+    height: 80px;
+    bottom: 0;
+}
+
+.section-home h1{
+    color:#fff;
+    font-size: 10vw;
+    font-weight: 800px;
+    text-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+    opacity: 0.3;
+}
+
+.section-two{
+    min-height: 100vh;
+    background: #23252b;
+
+}
+
+.section-two h2{
+    color:#fff;
+    font-size: 3em;
+    font-weight: 700;
+    margin: 30px 0;
+
+}
+.section-two p{
+    color: #fff;
+    font-size: 1em;
+    margin: 30px 0;
+
+}
 header{
     z-index: 999;
     position: fixed;
@@ -15,7 +66,7 @@ header{
     justify-content: space-between;
     align-items: center;
     background: #23252B;
-    box-shadow: 0 5px 25px rgb(0 0 0 / 20%)
+    box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
     padding: 0 100px;
     transition: 0.6s;
 }
@@ -32,6 +83,13 @@ header  .logo{
 header  .navigation{
     position: relative;
     line-height: 75px;
+}
+
+header.sticky  .navigation{
+    line-height: 60px;
+    transition: 0.6s;
+    transition-property: line-height;
+
 }
 
 header  .navigation .menu{
@@ -65,12 +123,16 @@ header  .navigation .menu{
     line-height: 40px;
     list-style: none;
     border-radius: 0 0 8px 8px;
-    box-shadow: 0 5px 25px rgb(0 0 0 / 20%)
+    box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
     pointer-events: none;
     transform: translateY(20px);
     Opacity: 0;
     transition: 0.3s;
     transition-property: transform, opacity;
+}
+
+header.sticky   .menu-item  .sub-menu{
+    top: 60px;
 }
 
 .menu-item:hover  .sub-menu{
@@ -125,7 +187,7 @@ header  .navigation .menu{
 
 .more   .more-menu  .more-item{
     padding: 7px 0;
-    box-shadow: inset 0px -30px 5px -30px rgba(255, 255, 255, 0.2)
+    box-shadow: inset 0px -30px 5px -30px rgba(255, 255, 255, 0.2);
     transition: 0.3s;
 }
 
@@ -146,14 +208,20 @@ header  .navigation .menu{
     top:0;
     right:-100%;
     padding:90px 50px;
+    visibility: hidden;
     overflow-y:auto;
-    justify-content:center;
-    list-style:none;
-    user-select: none;
+    transition: 0.5s;
+    transition-property: right, visibility;
+}
+
+header.sticky   .navigation{
+    line-height: 75px;
+
 }
 
 header  .navigation .menu.active{
     right: 0;
+    visibility: visible;
 }
 
     .menu-item{
@@ -170,6 +238,10 @@ header  .navigation .menu.active{
         overflow: hidden;
         display: none;
 
+    }
+
+    header.sticky   .menu-item  .sub-menu{
+       top:0; 
     }
 
     .menu-item:hover  .sub-menu{
@@ -192,7 +264,7 @@ header  .navigation .menu.active{
         position: relative;
         left:0;
         transform: translatY(0);
-        background: rgba(255, 255, 255, 0.1)
+        background: rgba(255, 255, 255, 0.1);
         border-radius: 5px;
         display: none;
     }
@@ -236,5 +308,9 @@ header  .navigation .menu.active{
     header{
         padding: 15px 20px;
 
+    }
+
+    header.sticky{
+        padding: 10px 20px;
     }
 }
