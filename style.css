@@ -6,20 +6,10 @@
     list-style: none;
 }
 
-:root{
-    --color-primary: #23252B;
-}
-section{
-    padding:20px 100px; 
-}
-
-body{
-    background-color: var(--color-primary) ;
-}
-
 #projects{
     color:rgb(245, 183, 15)
 }
+
 header{
     z-index: 999;
     position: fixed;
