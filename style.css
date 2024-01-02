@@ -3,39 +3,20 @@
     padding:0;
     box-sizing:border-box;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    list-style: none;
 }
 
+:root{
+    --color-primary: #23252B;
+}
 section{
     padding:20px 100px; 
 }
 
-.section-home{
-   position: relative;
-   min-height: 100vh;
-   background: url(other.png)no-repeat;
-   background-size: cover;
-   background-position: center;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+body{
+    background-color: var(--color-primary) ;
 }
 
-.section-home:before{
-    content:'';
-    position:absolute;
-    background: linear-gradient(to top, #23252B,transparent);
-    width: 100%;
-    height: 80px;
-    bottom: 0;
-}
-
-.section-home h2{
-    color:black;
-    font-size: 3vw;
-    font-weight: 800px;
-    text-shadow: 0 5px 25px rgb(0 0 0 / 20%);
-    opacity: 0.3;
-}
 
 .section-two{
     min-height: 100vh;
