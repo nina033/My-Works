@@ -4,13 +4,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Nina Faith Ukoha- Aspiring Software Engineer</title>  
-        <link rel="stylesheet" href="homestylesheet.css">
+        <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"></link>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" charset="utf-8"></script>
     </head>
     <body>
         <header>
-            <a href="Home.html" class="logo"> Nina <strong id="projects">Ukoha{}:</strong> </a> 
+            <a href="Home.html" class="logo"> Nina <span id="projects">Ukoha{}:</span> </a> 
             <div class="navigation">
                <ul class="menu">
                     <div class="close-btn"></div>
@@ -46,17 +47,62 @@
             </div>
             <div class="menu-btn"></div>
         </header>
+        <div id="header">  
+            <div class="header-text">
+                <p id="headtext">Aspiring Software Engineer | Web developer</p>
+                <h1 id="headtext2">Hi, I'm <span>Nina</span> Ukoha</h1> 
+            </div>
+        </div>
 
-        <section class="section-home">
-            <div>
-            <img id=image src="Getstarted.png">
-             </div>
-        </section>
+        <!-- about -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="testing.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Hello! I'm Nina Faith Ukoha, a dedicated software engineering student at the University of Ottawa, Ontario, Canada
+                             pursuing my Bachelors in Applied Science, Software Engineering(Co-op) in the french immersion stream. 
+                             I'm passionate about transforming theoretical knowledge into practical solutions, engaging in collaborative projects, hackathons, and internships to apply my skills in real-world settings.
+                              My love for problem-solving drives me to turn abstract ideas into functional systems, staying on the cutting edge of industry trends through continuous learning. 
+                              Proficient in Python, Java, HTML5, CSS, JavaScript, SQL, Jquery, React.Js and experienced with Git, PyCharm, Visual Studio Code, Visual Studio Professional, Mac OS, Windows and all Microsft Office Suite tools
+                              , I'm ready to contribute to diverse software engineering projects. By engaging in various projects, I refine teamwork, communication, and leadership which are essential skills in software engineering. 
+                              I am excited about contributing to groundbreaking projects and making a positive impact, join me on this thrilling adventure in the world of software engineering!.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web development</span><br>HTML5, CSS, JavaScript,Jquery, React.Js.</li>
+                            <li><span>Back-end development</span><br>Python, Java</li>
+                            <li> <span>Other</span><br>Designing web App interfaces</li>
+                        </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>September 2023- December</span><br>Team Member- Cyber Limb Dynamics; University of Ottawa Start-up project </li>
+                                <li><span>September 2022-June 2023</span><br>Information Technology Intern - Lone Star Global Consult Ltd., FCT, Nigeria.</li>
+    
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2023</span><br>Bsc. Software Engineering (French Immersion) - University of Ottawa, Ottawa, Ontario, Canada.</li>
+                                <li><span>2016-2022</span><br>Highschool - Regina Pacis College, Abuja, Nigeria.</li>
+                            </ul>
+                            </div>
+                           
+                    </div>
+                </div>
+            </div>
 
+        </div>
         
-
         
-
         <script type="text/javascript">
         //jquery for toggle dropdown menus
         $(document).ready(function(){
@@ -89,6 +135,19 @@
             var header= document.querySelector("header");
             header.classList.toggle("sticky", window.scrollY >0 );
         });
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
         </script>
     </body>
 </html>
