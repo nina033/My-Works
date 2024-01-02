@@ -5,6 +5,9 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     
 }
+a:hover{
+    color: #4080EF;
+}
 .header-text{
     margin-top: 0px;
     font-size: 30px;
@@ -87,6 +90,9 @@ header  .navigation .menu{
 
 }
 
+.menu-item span{
+    color: rgb(245, 183, 15);
+}
 
 .menu-item > a{
     color: #fff;
@@ -144,6 +150,7 @@ header.sticky   .menu-item  .sub-menu{
 .menu-item  .sub-menu   .sub-item:hover{
    background: #4080EF; 
 }
+
 
 .menu-item  .sub-menu   .sub-item:last-child:hover{
     border-radius: 0 0 8px 8px;
