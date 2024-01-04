@@ -5,6 +5,10 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     
 }
+html{
+    scroll-behavior: smooth;
+
+}
 div{
     padding-left: 15px;
     padding-right:15px;
@@ -633,4 +637,9 @@ form .btn2{
     .copyright{
         font-size: 14px;
     }
+}
+#msg{
+    color:#61b752;
+    margin-top: -40px;
+    display: block;
 }
