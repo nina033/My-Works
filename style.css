@@ -420,6 +420,10 @@ header  .navigation .menu.active{
     margin-bottom: 15px;
     color:rgb(245, 183, 15);
 }
+.services-list div p{
+    font-size: 16px;
+}
+
 .services-list div a{
     text-decoration: none;
     color: #fff;
@@ -478,6 +482,10 @@ header  .navigation .menu.active{
 .layer h3{
     font-weight:500;
     margin-bottom: 20px;
+    font-size: 25px;
+}
+.layer p{
+    font-size: 16px; 
 }
 .layer a{
    margin-top: 20px;
@@ -581,4 +589,48 @@ form .btn2{
     background: #2b2e35;
     font-weight: 300;
     margin-top:20px;
+}
+/*-------css for small screen ----------*/
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(phone-background.png);   
+    }
+    .header-text{
+        font-size: 16px;
+    }
+    #headtext{
+        position:relative;
+        top: 65vh;
+        
+    }
+    #headtext2{
+        position:relative;
+        top: 65vh;
+       
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    .subtitle{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px; 
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
 }
