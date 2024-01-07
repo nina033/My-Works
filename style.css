@@ -597,7 +597,7 @@ form .btn2{
 /*-------css for small screen ----------*/
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url(Group\ 4.png);   
+        background-image: url(phone.png);   
     }
     .header-text{
         font-size: 16px;
